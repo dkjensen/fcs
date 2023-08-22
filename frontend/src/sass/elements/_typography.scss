@@ -1,0 +1,58 @@
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0 0 0.75em;
+}
+
+h1 {
+  font-family: "Poppins", sans-serif;
+  font-size: clamp(2.5rem, 0.4502rem + 4.2705vw, 4rem);
+  text-transform: capitalize;
+  line-height: 130%;
+  font-weight: 600;
+}
+
+h3 {
+  font-size: var(--font-size--large);
+  font-weight: 600;
+  line-height: 146.25%;
+}
+
+@font-face {
+  font-family: "SF Pro Text";
+  font-weight: 400;
+  font-style: normal;
+  src: url("./fonts/SF-Pro-Regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "SF Pro Text";
+  font-weight: 400;
+  font-style: italic;
+  src: url("./fonts/SF-Pro-RegularItalic.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "SF Pro Text";
+  font-weight: 600;
+  font-style: normal;
+  src: url("./fonts/SF-Pro-Semibold.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "SF Pro Text";
+  font-weight: 700;
+  font-style: normal;
+  src: url("./fonts/SF-Pro-Bold.woff2") format("woff2");
+}

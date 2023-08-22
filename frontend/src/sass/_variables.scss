@@ -1,0 +1,16 @@
+:root {
+  --color-primary: #6786bc;
+  --color-primary-dark: #5c7aaf;
+  --color-primary-light: #eef3f8;
+
+  --font-family--body: "Open Sans", sans-serif;
+  --font-family--heading: "Poppings", sans-serif;
+  --font-family--alt: "SF Pro Text", sans-serif;
+
+  --font-size--large: clamp(1.125rem, 0.6722rem + 0.9434vw, 1.25rem);
+  --font-size--regular: 16px;
+  --font-size--medium: 15px;
+  --font-size--small: 14px;
+
+  --spacing--regular: 20px;
+}

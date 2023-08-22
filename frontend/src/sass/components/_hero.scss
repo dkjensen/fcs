@@ -1,0 +1,104 @@
+.hero {
+  min-height: clamp(0.0625rem, -165.4469rem + 344.8113vw, 45.75rem);
+  background-color: var(--color-primary-light);
+  background-size: auto 749px;
+  background-position: 40vw center;
+  background-repeat: no-repeat;
+  background-blend-mode: multiply;
+  display: flex;
+  align-items: flex-end;
+  padding-top: 182px;
+  padding-bottom: clamp(3.75rem, -14.3632rem + 37.7358vw, 8.75rem);
+
+  @media (min-width: 768px) {
+    background-position: center right;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 62px 0;
+
+    h1 {
+      max-width: 660px;
+      width: 60%;
+      margin: 0;
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: 0px 6px 20px 0px rgba(23, 37, 56, 0.1);
+
+    @media (min-width: 768px) {
+      flex-direction: row;
+      flex-wrap: nowrap;
+    }
+
+    [type="text"],
+    select {
+      box-sizing: border-box;
+      height: 56px;
+      margin: 11px 21px;
+      border: 0;
+      box-shadow: none;
+      padding: 13px 21px;
+      font-size: var(--font-size--large);
+      line-height: 146.25%;
+      text-transform: uppercase;
+
+      @media (min-width: 768px) {
+        margin: 21px;
+      }
+
+      &::placeholder {
+        color: rgba(63, 75, 91, 0.6);
+      }
+
+      &:focus {
+        outline-color: rgba(63, 75, 91, 0.6);
+      }
+    }
+
+    [type="submit"] {
+      border-radius: 4px;
+      text-transform: uppercase;
+      font-size: 20px;
+      letter-spacing: 0;
+      padding-left: clamp(2.75rem, -5.8538rem + 17.9245vw, 5.125rem);
+      padding-right: clamp(2.75rem, -5.8538rem + 17.9245vw, 5.125rem);
+      text-align: center;
+      justify-content: center;
+    }
+
+    &-field {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      flex: auto;
+
+      &.has-separator {
+        &:before {
+          content: "";
+          position: absolute;
+          top: 0;
+          right: 0;
+          left: 0;
+          height: 1px;
+          background-color: #e2e8ed;
+
+          @media (min-width: 768px) {
+            width: 1px;
+            height: auto;
+            top: 0;
+            bottom: 0;
+            left: 0;
+          }
+        }
+      }
+    }
+  }
+}

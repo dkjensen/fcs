@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Poppins:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.scss" type="text/css" lang="scss" />
+    <title>Formidable Frontend Test</title>
+  </head>
+  <body>
+    <div class="site">
+      <div class="site-header">
+        <div class="container">
+          <div class="site-header__content">
+            <a href="./" class="site-branding">
+              <img src="./images/logo.svg" width="218" class="site-logo" />
+            </a>
+            <div>
+              <a href="#" class="button">Get Business Directory</a>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+      <div class="site-content">
+        <div class="hero" style="background-image: url('./images/hero-image.png')">
+          <div class="container">
+            <div class="hero__content">
+              <h1>Very tasty title about restaurants and Food</h1>
+              <form method="get" class="hero__form">
+                <label class="hero__form-field" for="restaurant-name">
+                  <span class="screen-reader-text">Restaurant Name</span>
+                  <input type="text" name="restaurant-name" id="restaurant-name" placeholder="Restaurant Name" autofocus />
+                </label>
+                <label class="hero__form-field has-separator" for="restaurant-location">
+                  <span class="screen-reader-text">Restaurant Location</span>
+                  <select name="restaurant-location" id="restaurant-location" placeholder="All Locations">
+                    <option value="">All Locations</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                  </select>
+                </label>
+                <button type="submit" class="button large">Search</button>
+              </form>
+            </div>
+          </div>
+          
+        </div>
+        <div class="container">
+          <div class="grid">
+            <div class="grid__item grid__item-new">
+              <a href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 38 38" fill="none">
+                  <path d="M19 34.8333C27.7445 34.8333 34.8334 27.7445 34.8334 19C34.8334 10.2555 27.7445 3.16667 19 3.16667C10.2555 3.16667 3.16669 10.2555 3.16669 19C3.16669 27.7445 10.2555 34.8333 19 34.8333Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M19 12.6667V25.3333" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M12.6667 19H25.3334" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                Add a category
+              </a>
+            </div>
+            <div class="grid__item" style="background-image: url('./images/italian.png')">
+              <a href="#">
+                <h3>Italian</h3>
+                <span>32 restaurants</span>
+              </a>
+            </div>
+            <div class="grid__item" style="background-image: url('./images/french.png')">
+              <a href="#">
+                <h3>French</h3>
+                <span>32 restaurants</span>
+              </a>
+            </div>
+            <div class="grid__item" style="background-image: url('./images/sweets.png')">
+              <a href="#">
+                <h3>Sweets</h3>
+                <span>32 restaurants</span>
+              </a>
+            </div>
+            <div class="grid__item" style="background-image: url('./images/mexican.png')">
+              <a href="#">
+                <h3>Mexican</h3>
+                <span>32 restaurants</span>
+              </a>
+            </div>
+            <div class="grid__item" style="background-image: url('./images/asian.png')">
+              <a href="#">
+                <h3>Asian</h3>
+                <span>32 restaurants</span>
+              </a>
+            </div>
+            <div class="grid__item" style="background-image: url('./images/coffee-tea.png')">
+              <a href="#">
+                <h3>Coffee & Tea</h3>
+                <span>32 restaurants</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
