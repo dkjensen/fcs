@@ -1,0 +1,17 @@
+{
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true
+  },
+  "editor.formatOnSave": false,
+  "phpsab.fixerEnable": true,
+  "phpsab.snifferEnable": true,
+  "phpsab.standard": "./phpcs.xml",
+  "phpsab.debug": true,
+  "phpsab.autoRulesetSearch": true,
+  "phpsab.snifferMode": "onType",
+  "files.eol": "\n",
+  "[php]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "valeryanm.vscode-phpsab"
+  }
+}
