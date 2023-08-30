@@ -27,3 +27,4 @@ require_once 'includes/ajax.php';
 require_once 'includes/shortcodes.php';
 require_once 'includes/cli.php';
 require_once 'includes/admin-page.php';
+require_once 'includes/filters.php';

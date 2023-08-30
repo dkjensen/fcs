@@ -80,4 +80,32 @@ class ApiTest extends TestCase
 		$this->assertNotEmpty($root->get_data()->get_headers());
 		$this->assertEquals(5, count($root->get_data()->get_rows()));
 	}
+
+	public function test_sanitize() {
+		$provider = $this->getMockBuilder('\Dkjensen\FCS\Provider')
+			->getMock();
+
+		$body = '{"title":"This amazing table","data":{"headers":["ID","First Name","Last Name","Email","Date"],"rows":[{"id":"6a6","fname":"<span>Chris</span>","lname":"Test","email":"chris<bad>@test.com","date":1692881546},{"id":12,"fname":"Bob","lname":"Test","email":"bob@test.com","date":1692795146},{"id":33,"fname":"Bill","lname":"Test","email":"bill@test.com","date":1693636946},{"id":54,"fname":"Jack","lname":"Test","email":"jack@test.com","date":1694091146},{"id":92,"fname":"Joe","lname":"Test","email":"joe@test.com","date":1693227146}]}}';
+
+		$response = [
+			'response' => [
+				'code' => 200
+			],
+			'body' => $body
+		];
+
+		$provider->expects($this->once())
+			->method('get_request')
+			->willReturn($response);
+
+		$api = new Dkjensen\FCS\Adapter($provider);
+
+		$challenge = $api->get_challenge_response();
+
+		$saved = get_transient('fcs_challenge_response');
+
+		$this->assertSame( $saved['data']['rows'][0]['id'], 66 );
+		$this->assertSame( $saved['data']['rows'][0]['fname'], 'Chris' );
+		$this->assertSame( $saved['data']['rows'][0]['email'], 'chrisbad@test.com' );
+	}
 }
